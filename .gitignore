@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+problem-library/raw/
+problem-library/derived/
+problem-library/staging/
+.private/
+*.log

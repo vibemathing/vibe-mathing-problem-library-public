@@ -1,0 +1,32 @@
+{
+  "local_execution_solution_is_separate": true,
+  "publication_direction": "internal_to_public_only",
+  "schema_version": "1.0.0",
+  "solution_id": "web-gpt-github-plugin",
+  "split_repository": {
+    "exact_problem_contracts": 1,
+    "generated_from_matching_visibility_template": true,
+    "kind": "single_problem_research",
+    "name_pattern": "problem-<problem-slug>",
+    "repository_identity_must_be_verified": true,
+    "research_truth_is_local_to_problem_repository": true
+  },
+  "total_repository_kinds": [
+    {
+      "kind": "problem_library",
+      "public": {
+        "repository": "vibemathing/vibe-mathing-problem-library-public",
+        "role": "derived_public_problem_catalog",
+        "visibility": "public"
+      }
+    },
+    {
+      "kind": "problem_research_template",
+      "public": {
+        "repository": "vibemathing/vibe-mathing-problem-public-template",
+        "role": "derived_public_web_research_harness_template",
+        "visibility": "public"
+      }
+    }
+  ]
+}

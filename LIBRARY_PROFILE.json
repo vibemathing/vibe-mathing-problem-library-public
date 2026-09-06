@@ -1,0 +1,20 @@
+{
+  "allowed_proposal_paths": [
+    "proposals/problem-contracts/**",
+    "proposals/source-corrections/**"
+  ],
+  "canonical_admission": "derived_from_internal_only",
+  "includes_source_observations": false,
+  "prohibited_paths": [
+    "research/**",
+    "result-library/**",
+    "problem-library/raw/**",
+    "problem-library/derived/**"
+  ],
+  "repository": "vibemathing/vibe-mathing-problem-library-public",
+  "role": "problem_discovery_and_contract_admission",
+  "schema_version": "1.0.0",
+  "solution": "web-gpt-github-plugin",
+  "stores_mathematical_results": false,
+  "visibility": "public"
+}

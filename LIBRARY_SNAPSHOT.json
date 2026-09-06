@@ -1,0 +1,139 @@
+{
+  "built_at": "2026-09-05T17:03:50+08:00",
+  "counts": {
+    "canonical_problem_contracts": 0,
+    "draft_problem_contracts": 0,
+    "repository_locators": 0,
+    "source_observations": 0,
+    "source_shards": 0
+  },
+  "files": [
+    {
+      "bytes": 578,
+      "path": ".github/workflows/ci.yml",
+      "sha256": "61253b60dc5985e71528b53b4ef8eaf7e7e278630da5934fcaf6acb9c092d3f9"
+    },
+    {
+      "bytes": 117,
+      "path": ".gitignore",
+      "sha256": "69ee8509c7592fb794b95ca237caa63bf18784e98d1e8c923dbcf857c19ef1b6"
+    },
+    {
+      "bytes": 7836,
+      "path": "AGENTS.md",
+      "sha256": "23b889adf9e0737cc92986dfac9620b2199bee02a5c7ba70d8374dc84b8f4ffe"
+    },
+    {
+      "bytes": 466,
+      "path": "CATALOG.md",
+      "sha256": "2a0f23732d88eaa17b3b1c1a96923a79c7d4ef7de6e23f22f3b8b14d91b5e378"
+    },
+    {
+      "bytes": 601,
+      "path": "LIBRARY_PROFILE.json",
+      "sha256": "0fc7cdfb0cc61361528f2724a28238f5fc7a0683bbd3ece0243769af7e6854e4"
+    },
+    {
+      "bytes": 88,
+      "path": "Makefile",
+      "sha256": "d8eb0fa7e41331fbe80d0dea0b6040bb4968a67ad5592d913cdebb47bd33a406"
+    },
+    {
+      "bytes": 927,
+      "path": "README.md",
+      "sha256": "7ac28bffcb5b3d02438efcf2cf60c391ed38d4b4730cf7467f3d2eefe5c28424"
+    },
+    {
+      "bytes": 1000,
+      "path": "REPOSITORY_TOPOLOGY.json",
+      "sha256": "cfeb39cc4001617fa8ee048d188f0cb67a7e4725dfcde778575cfd80ab98988e"
+    },
+    {
+      "bytes": 63,
+      "path": "catalog/canonical-index.json",
+      "sha256": "61e8e58f4caae682646effbc97927e8851fabc2b4f8fe0aaeec0c7f4ba9a77ea"
+    },
+    {
+      "bytes": 63,
+      "path": "catalog/draft-index.json",
+      "sha256": "61e8e58f4caae682646effbc97927e8851fabc2b4f8fe0aaeec0c7f4ba9a77ea"
+    },
+    {
+      "bytes": 186,
+      "path": "catalog/source-shards.json",
+      "sha256": "374e7ad1b772dcde731fec41b665923f309d66088f6b0670407b1268456a9267"
+    },
+    {
+      "bytes": 0,
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "problem-library/records/repositories.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 20704,
+      "path": "problem-library/registry/candidate-sources.json",
+      "sha256": "a40cc4bf8871ee026e46107995a8556d2ecafce46daf9f25c4912f429cdb6d27"
+    },
+    {
+      "bytes": 3891,
+      "path": "problem-library/schema/candidate-observation.schema.json",
+      "sha256": "943e639a4f9faa4e3653ba705e9f36472128dd3c21a8bd38a79c0ffeb79bf533"
+    },
+    {
+      "bytes": 2596,
+      "path": "problem-library/schema/candidate-source.schema.json",
+      "sha256": "28ab2b122e2a5a22ed70967e2e1c67e060a2c7fc1f48a0b0ee48ad77911730d0"
+    },
+    {
+      "bytes": 5344,
+      "path": "problem-library/schema/canonical-problem.schema.json",
+      "sha256": "7029fd1f04b4e1421ee59e3faae2a6b596152ca0cc067290840b3cb4a9b8ad9d"
+    },
+    {
+      "bytes": 1404,
+      "path": "problem-library/schema/problem-repository-record.schema.json",
+      "sha256": "ccd83cd3650976ec3b0361c539382869896acfbbb6fc597ce1cf187dca007539"
+    },
+    {
+      "bytes": 3126,
+      "path": "problem-library/schema/problem.schema.json",
+      "sha256": "98d238ffa342e9f911b77322ec6d2d863fed9fb6e23dfeb117da66729bc34958"
+    },
+    {
+      "bytes": 307,
+      "path": "requirements-problem-library.txt",
+      "sha256": "a6d26863894f908edb5d27f1e927a721bc57134f3ec732300b56057f52907cc5"
+    },
+    {
+      "bytes": 4154,
+      "path": "scripts/query_web_problem_library.py",
+      "sha256": "fd56075242e31ee5d1e9c648ef43f5677833ea01ba177bbd55c2686e7f3ce615"
+    },
+    {
+      "bytes": 13766,
+      "path": "scripts/validate_web_problem_library.py",
+      "sha256": "a1aba101e9f16992edb903e94a17c83902aaa42358a7b2880b14c8844d8191d5"
+    }
+  ],
+  "repository": "vibemathing/vibe-mathing-problem-library-public",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358714531,
+    "default_branch": "main",
+    "full_name": "vibemathing/vibe-mathing-problem-library-public",
+    "node_id": "R_kgDOUPxWow",
+    "visibility": "public"
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "content_bound": true,
+    "publication_source": "reviewed_internal_export",
+    "worktree_dirty": true
+  },
+  "tree_sha256": "9702d47a0fa5feb96a149edf13b897caa1dea12082c6c8f3da478b5429345084",
+  "visibility": "public"
+}

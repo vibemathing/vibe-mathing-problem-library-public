@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/problem-repository-record.schema.json",
+  "title": "Concrete Problem Repository Locator",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "problem_id", "contract_sha256", "repository", "visibility",
+    "database_id", "node_id", "default_branch", "template_repository", "template_commit",
+    "harness_snapshot_sha256", "state", "recorded_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "problem_id": {"type": "string", "pattern": "^problem:[a-z0-9][a-z0-9.-]*$"},
+    "contract_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "visibility": {"enum": ["private", "public"]},
+    "database_id": {"type": "integer", "minimum": 1},
+    "node_id": {"type": "string", "minLength": 1},
+    "default_branch": {"type": "string", "pattern": "^[A-Za-z0-9._/-]+$"},
+    "template_repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "template_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "harness_snapshot_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "state": {"enum": ["provisioned", "paused", "retired"]},
+    "recorded_at": {"type": "string", "format": "date-time"}
+  }
+}
