@@ -20,5 +20,6 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: requirements-problem-library.txt
       - run: python -m pip install --require-hashes -r requirements-problem-library.txt
       - run: make check
