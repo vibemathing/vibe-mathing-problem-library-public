@@ -1,0 +1,99 @@
+{
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "aliases": [
+    "Open Problem Garden OPG-434"
+  ],
+  "allowed_axioms": [
+    "finite-graph-basic",
+    "finite-combinatorics"
+  ],
+  "assumptions": [
+    "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
+  ],
+  "constraints": {
+    "allowed_adapters": [
+      "cubic-graph-enumerator-v1",
+      "edge-color-csp-v1",
+      "lean-obligation-v1"
+    ],
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "max_attempts": 20,
+    "runtime": {
+      "max_output_bytes": 5242880,
+      "max_retries": 3,
+      "max_transitions": 300,
+      "timeout_seconds": 1800
+    }
+  },
+  "created_at": "2026-09-06T03:30:00Z",
+  "definitions": [
+    {
+      "definition": "An assignment of one of five colors to every edge; properness is not assumed unless derived.",
+      "term": "edge coloring by five colors"
+    },
+    {
+      "definition": "The spanning subgraph (V(G),{e∈E(G):c(e)≠i}).",
+      "term": "complement of color class i"
+    }
+  ],
+  "domain": {
+    "description": "Finite simple 3-regular graphs containing no triangle.",
+    "objects": [
+      "triangle-free cubic graph",
+      "5-edge-coloring",
+      "bipartite complement color class"
+    ]
+  },
+  "lifecycle": "active",
+  "msc": [
+    "05C15"
+  ],
+  "problem_id": "problem:opg-434-weak-pentagon",
+  "quantifiers": [
+    {
+      "domain": "finite simple triangle-free cubic graphs",
+      "kind": "forall",
+      "variables": [
+        "G"
+      ]
+    },
+    {
+      "domain": "edge colorings c:E(G)→{1,2,3,4,5}",
+      "kind": "exists",
+      "variables": [
+        "c"
+      ]
+    },
+    {
+      "domain": "colors i∈{1,2,3,4,5}",
+      "kind": "forall",
+      "variables": [
+        "i"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "retrieved_at": "2026-09-02T00:06:43Z",
+      "source": "UnsolvedMath",
+      "source_record_id": "unsolvedmath-opg-434-fb1bc60ee419",
+      "url": "https://www.unsolvedmath.com/problems/OPG-434"
+    }
+  ],
+  "statement": {
+    "language": "en",
+    "text": "Can the edges of every finite triangle-free cubic graph G be assigned five colors so that, for each color, the spanning subgraph formed by all edges of the other four colors is bipartite?",
+    "version": 1
+  },
+  "title": "Weak pentagon problem",
+  "updated_at": "2026-09-06T03:30:00Z"
+}

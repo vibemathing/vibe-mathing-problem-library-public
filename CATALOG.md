@@ -2,7 +2,7 @@
 
 - Repository: `vibemathing/vibe-mathing-problem-library-public`
 - Visibility: `public`
-- Canonical ProblemContracts: 0
+- Canonical ProblemContracts: 10
 - Draft ProblemContracts: 0
 - Source observations: 0
 - Source shards: 0

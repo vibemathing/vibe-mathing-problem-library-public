@@ -1,0 +1,96 @@
+{
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "aliases": [
+    "Open Problem Garden OPG-37271"
+  ],
+  "allowed_axioms": [
+    "finite-graph-basic",
+    "finite-combinatorics"
+  ],
+  "assumptions": [
+    "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
+  ],
+  "constraints": {
+    "allowed_adapters": [
+      "bounded-graph-enumerator-v1",
+      "sat-certificate-v1",
+      "lean-obligation-v1"
+    ],
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "max_attempts": 20,
+    "runtime": {
+      "max_output_bytes": 5242880,
+      "max_retries": 3,
+      "max_transitions": 300,
+      "timeout_seconds": 1800
+    }
+  },
+  "created_at": "2026-09-06T03:30:00Z",
+  "definitions": [
+    {
+      "definition": "An edge coloring in which incident edges receive different colors.",
+      "term": "proper edge coloring"
+    },
+    {
+      "definition": "A proper edge coloring with no path or cycle of four edges whose edges use only two colors.",
+      "term": "star edge coloring"
+    },
+    {
+      "definition": "The minimum number of colors in a star edge coloring of G.",
+      "term": "star chromatic index χ′ₛ(G)"
+    }
+  ],
+  "domain": {
+    "description": "Finite simple undirected graphs G with maximum degree Δ(G) ≤ 3.",
+    "objects": [
+      "finite simple graph",
+      "edge coloring",
+      "star chromatic index"
+    ]
+  },
+  "lifecycle": "active",
+  "msc": [
+    "05C15"
+  ],
+  "problem_id": "problem:opg-37271-star-chromatic-index-cubic",
+  "quantifiers": [
+    {
+      "domain": "finite simple undirected graphs with maximum degree at most 3",
+      "kind": "forall",
+      "variables": [
+        "G"
+      ]
+    },
+    {
+      "domain": "edge colorings c:E(G)→{1,…,6}",
+      "kind": "exists",
+      "variables": [
+        "c"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "retrieved_at": "2026-09-02T00:06:43Z",
+      "source": "UnsolvedMath",
+      "source_record_id": "unsolvedmath-opg-37271-a583951f63e7",
+      "url": "https://www.unsolvedmath.com/problems/OPG-37271"
+    }
+  ],
+  "statement": {
+    "language": "en",
+    "text": "For every finite simple graph G with maximum degree at most 3, is the star chromatic index χ′ₛ(G) at most 6?",
+    "version": 1
+  },
+  "title": "Star chromatic index of subcubic graphs",
+  "updated_at": "2026-09-06T03:30:00Z"
+}

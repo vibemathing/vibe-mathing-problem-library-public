@@ -15,7 +15,11 @@
     {
       "kind": "problem_library",
       "public": {
+        "identity_state": "verified",
+        "is_template": false,
         "repository": "vibemathing/vibe-mathing-problem-library-public",
+        "repository_database_id": 1358714531,
+        "repository_node_id": "R_kgDOUPxWow",
         "role": "derived_public_problem_catalog",
         "visibility": "public"
       }
@@ -23,7 +27,11 @@
     {
       "kind": "problem_research_template",
       "public": {
+        "identity_state": "verified",
+        "is_template": true,
         "repository": "vibemathing/vibe-mathing-problem-public-template",
+        "repository_database_id": 1358726712,
+        "repository_node_id": "R_kgDOUPyGOA",
         "role": "derived_public_web_research_harness_template",
         "visibility": "public"
       }

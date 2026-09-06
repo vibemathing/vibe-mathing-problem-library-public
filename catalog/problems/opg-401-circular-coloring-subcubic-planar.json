@@ -1,0 +1,94 @@
+{
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "aliases": [
+    "Open Problem Garden OPG-401"
+  ],
+  "allowed_axioms": [
+    "finite-graph-basic",
+    "planar-graph-basic",
+    "finite-combinatorics"
+  ],
+  "assumptions": [
+    "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
+  ],
+  "constraints": {
+    "allowed_adapters": [
+      "planar-graph-enumerator-v1",
+      "circular-coloring-sat-v1",
+      "lean-obligation-v1"
+    ],
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "max_attempts": 20,
+    "runtime": {
+      "max_output_bytes": 5242880,
+      "max_retries": 3,
+      "max_transitions": 300,
+      "timeout_seconds": 1800
+    }
+  },
+  "created_at": "2026-09-06T03:30:00Z",
+  "definitions": [
+    {
+      "definition": "For integers p≥2q>0, a map φ:V(G)→Z_p such that for every edge uv, q≤|φ(u)−φ(v)|≤p−q using cyclic representatives.",
+      "term": "(p,q)-coloring"
+    },
+    {
+      "definition": "The infimum of p/q over all (p,q)-colorings of G.",
+      "term": "circular chromatic number χ_c(G)"
+    }
+  ],
+  "domain": {
+    "description": "Finite simple triangle-free planar graphs G with maximum degree Δ(G) ≤ 3.",
+    "objects": [
+      "finite planar graph",
+      "circular coloring",
+      "circular chromatic number"
+    ]
+  },
+  "lifecycle": "active",
+  "msc": [
+    "05C15",
+    "05C10"
+  ],
+  "problem_id": "problem:opg-401-circular-coloring-subcubic-planar",
+  "quantifiers": [
+    {
+      "domain": "finite simple triangle-free planar graphs with maximum degree at most 3",
+      "kind": "forall",
+      "variables": [
+        "G"
+      ]
+    },
+    {
+      "domain": "(20,7)-colorings φ:V(G)→Z_20",
+      "kind": "exists",
+      "variables": [
+        "φ"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "retrieved_at": "2026-09-02T00:06:43Z",
+      "source": "UnsolvedMath",
+      "source_record_id": "unsolvedmath-opg-401-24c3444fd91a",
+      "url": "https://www.unsolvedmath.com/problems/OPG-401"
+    }
+  ],
+  "statement": {
+    "language": "en",
+    "text": "Does every finite triangle-free planar graph of maximum degree at most 3 have circular chromatic number at most 20/7?",
+    "version": 1
+  },
+  "title": "Circular coloring of triangle-free subcubic planar graphs",
+  "updated_at": "2026-09-06T03:30:00Z"
+}

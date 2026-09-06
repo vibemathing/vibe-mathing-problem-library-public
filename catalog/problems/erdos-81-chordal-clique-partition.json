@@ -1,0 +1,107 @@
+{
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "aliases": [
+    "Erdős 81"
+  ],
+  "allowed_axioms": [
+    "finite-graph-basic",
+    "finite-combinatorics",
+    "real-arithmetic"
+  ],
+  "assumptions": [
+    "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
+  ],
+  "constraints": {
+    "allowed_adapters": [
+      "chordal-graph-enumerator-v1",
+      "clique-partition-ilp-v1",
+      "lean-obligation-v1"
+    ],
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "max_attempts": 20,
+    "runtime": {
+      "max_output_bytes": 5242880,
+      "max_retries": 3,
+      "max_transitions": 300,
+      "timeout_seconds": 1800
+    }
+  },
+  "created_at": "2026-09-06T03:30:00Z",
+  "definitions": [
+    {
+      "definition": "A graph with no induced cycle of length greater than 3.",
+      "term": "chordal graph"
+    },
+    {
+      "definition": "A family of complete subgraphs whose edge sets are pairwise disjoint and whose union is E(G).",
+      "term": "edge partition into cliques"
+    },
+    {
+      "definition": "Existence of constants C and n₀ giving the bound n²/6+Cn for all n≥n₀.",
+      "term": "n²/6+O(n)"
+    }
+  ],
+  "domain": {
+    "description": "Finite simple chordal graphs G on n vertices.",
+    "objects": [
+      "chordal graph",
+      "edge clique partition",
+      "asymptotic upper bound"
+    ]
+  },
+  "lifecycle": "active",
+  "msc": [
+    "05C70",
+    "05C35"
+  ],
+  "problem_id": "problem:erdos-81-chordal-clique-partition",
+  "quantifiers": [
+    {
+      "domain": "a real constant C>0 and an integer n₀≥1",
+      "kind": "exists",
+      "variables": [
+        "C",
+        "n₀"
+      ]
+    },
+    {
+      "domain": "integers n≥n₀ and finite simple chordal graphs G on n vertices",
+      "kind": "forall",
+      "variables": [
+        "n",
+        "G"
+      ]
+    },
+    {
+      "domain": "edge partitions P of G into at most n²/6+Cn complete subgraphs",
+      "kind": "exists",
+      "variables": [
+        "P"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "retrieved_at": "2026-08-31T18:49:04Z",
+      "source": "ErdosProblems",
+      "source_record_id": "erdosproblems-74f32b0809bd8e0d",
+      "url": "https://www.erdosproblems.com/81"
+    }
+  ],
+  "statement": {
+    "language": "en",
+    "text": "Do there exist universal constants C and n₀ such that every chordal graph G on n≥n₀ vertices has an edge partition into at most n²/6 + Cn cliques?",
+    "version": 1
+  },
+  "title": "Clique partitions of chordal graphs (Erdős Problem 81)",
+  "updated_at": "2026-09-06T03:30:00Z"
+}

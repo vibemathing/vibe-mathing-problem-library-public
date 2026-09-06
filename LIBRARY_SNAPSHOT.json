@@ -1,9 +1,9 @@
 {
-  "built_at": "2026-09-05T17:03:50+08:00",
+  "built_at": "2026-09-06T11:46:42+08:00",
   "counts": {
-    "canonical_problem_contracts": 0,
+    "canonical_problem_contracts": 10,
     "draft_problem_contracts": 0,
-    "repository_locators": 0,
+    "repository_locators": 10,
     "source_observations": 0,
     "source_shards": 0
   },
@@ -24,9 +24,9 @@
       "sha256": "23b889adf9e0737cc92986dfac9620b2199bee02a5c7ba70d8374dc84b8f4ffe"
     },
     {
-      "bytes": 466,
+      "bytes": 467,
       "path": "CATALOG.md",
-      "sha256": "2a0f23732d88eaa17b3b1c1a96923a79c7d4ef7de6e23f22f3b8b14d91b5e378"
+      "sha256": "2e1c79e4c562e4d6611f5dcd54f3fe675d3026c719ff6e821575ba8812513305"
     },
     {
       "bytes": 601,
@@ -44,14 +44,14 @@
       "sha256": "7ac28bffcb5b3d02438efcf2cf60c391ed38d4b4730cf7467f3d2eefe5c28424"
     },
     {
-      "bytes": 1000,
+      "bytes": 1319,
       "path": "REPOSITORY_TOPOLOGY.json",
-      "sha256": "cfeb39cc4001617fa8ee048d188f0cb67a7e4725dfcde778575cfd80ab98988e"
+      "sha256": "2eeecc529ab9233c22b4b8c6a6aa4fb086496f20a46a8b7217d57b465faa33be"
     },
     {
-      "bytes": 63,
+      "bytes": 2722,
       "path": "catalog/canonical-index.json",
-      "sha256": "61e8e58f4caae682646effbc97927e8851fabc2b4f8fe0aaeec0c7f4ba9a77ea"
+      "sha256": "8127cd8b29cb6f7dba25f10921b8bf48fbcffd86c328204da9e1b38bef523a38"
     },
     {
       "bytes": 63,
@@ -59,19 +59,69 @@
       "sha256": "61e8e58f4caae682646effbc97927e8851fabc2b4f8fe0aaeec0c7f4ba9a77ea"
     },
     {
+      "bytes": 2704,
+      "path": "catalog/problems/erdos-81-chordal-clique-partition.json",
+      "sha256": "6120f1423361e10006bea03658dbd7484dd6ab372fa3deff8214a299d6344426"
+    },
+    {
+      "bytes": 2478,
+      "path": "catalog/problems/opg-169-two-color-conjecture.json",
+      "sha256": "191ca52fe59599753546123a5924ea1fff38cf515c063b0247ad4391ae4c2505"
+    },
+    {
+      "bytes": 2701,
+      "path": "catalog/problems/opg-1808-monochromatic-reachability.json",
+      "sha256": "e1bae91690d55e6b693403926f25d76fe791aa40d14d07a1e65b01fe7d6a3c93"
+    },
+    {
+      "bytes": 2471,
+      "path": "catalog/problems/opg-37271-star-chromatic-index-cubic.json",
+      "sha256": "3c1b2f9ce96d9332cc4e0b27a0f751f12d34fea1da74f549f17ff64c0ac63527"
+    },
+    {
+      "bytes": 2674,
+      "path": "catalog/problems/opg-37357-obstacle-number.json",
+      "sha256": "1bdfd8c262ba2f6c9e24f5d32bd73dfd7996a72f751a5c99a3a7e5af4deba371"
+    },
+    {
+      "bytes": 2787,
+      "path": "catalog/problems/opg-37364-matching-cut-girth.json",
+      "sha256": "4d5818f57c17b2dd3cc4774c2268a37c10e926c844483537bfa6ca118a76053a"
+    },
+    {
+      "bytes": 2450,
+      "path": "catalog/problems/opg-401-circular-coloring-subcubic-planar.json",
+      "sha256": "de3af7a9498e54f9816407a58e85af299e8d3f5a10584370ecdc67653ccdeea2"
+    },
+    {
+      "bytes": 2469,
+      "path": "catalog/problems/opg-434-weak-pentagon.json",
+      "sha256": "af7fce5b32e6dd9ff31d22675778e5575b09f364f23098f4381b6aea2fd78915"
+    },
+    {
+      "bytes": 2363,
+      "path": "catalog/problems/opg-46613-cubic-p3-partition.json",
+      "sha256": "9c259e02e953b234ba3a34ccde048e7f137d132bf3ac43b88f19df6c8876ea45"
+    },
+    {
+      "bytes": 2575,
+      "path": "catalog/problems/opg-500-geodesic-cycles.json",
+      "sha256": "a632ab513415982d35a5e77e11dc292a4802a2f841bb6a5a319739979e628ac3"
+    },
+    {
       "bytes": 186,
       "path": "catalog/source-shards.json",
       "sha256": "374e7ad1b772dcde731fec41b665923f309d66088f6b0670407b1268456a9267"
     },
     {
-      "bytes": 0,
+      "bytes": 20996,
       "path": "problem-library/records/canonical-problems.jsonl",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "sha256": "e4ac44e99b0f306ce161efe8651464d018b590c8a03b966b3207770eb6f5a445"
     },
     {
-      "bytes": 0,
+      "bytes": 6386,
       "path": "problem-library/records/repositories.jsonl",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "sha256": "05650cfe8fd30f422cb03c1df1e48abdcf18fa85e23d4fdec8ea25fda8378175"
     },
     {
       "bytes": 20704,
@@ -132,8 +182,8 @@
   "source": {
     "content_bound": true,
     "publication_source": "reviewed_internal_export",
-    "worktree_dirty": true
+    "worktree_dirty": false
   },
-  "tree_sha256": "94c142c2ecd0765c6776eed51c27c2c9657043a05385505835f8d8de3219b4d3",
+  "tree_sha256": "b7859b8661c8c3a365c1c8163d8cf9f8620f188aefa605c817a84759b54d311b",
   "visibility": "public"
 }

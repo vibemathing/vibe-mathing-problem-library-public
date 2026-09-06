@@ -1,0 +1,100 @@
+{
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "aliases": [
+    "Open Problem Garden OPG-500"
+  ],
+  "allowed_axioms": [
+    "finite-graph-basic",
+    "real-ordered-field"
+  ],
+  "assumptions": [
+    "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
+  ],
+  "constraints": {
+    "allowed_adapters": [
+      "bounded-graph-enumerator-v1",
+      "exact-linear-inequality-v1",
+      "lean-obligation-v1"
+    ],
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "max_attempts": 20,
+    "runtime": {
+      "max_output_bytes": 5242880,
+      "max_retries": 3,
+      "max_transitions": 300,
+      "timeout_seconds": 1800
+    }
+  },
+  "created_at": "2026-09-06T03:30:00Z",
+  "definitions": [
+    {
+      "definition": "A cycle C such that for each pair of vertices on C, one of the two C-arcs between them is an ℓ-shortest path in G.",
+      "term": "ℓ-geodesic cycle"
+    },
+    {
+      "definition": "An induced non-separating cycle; deleting its vertices leaves the remaining graph connected or empty.",
+      "term": "peripheral cycle"
+    }
+  ],
+  "domain": {
+    "description": "Finite simple 3-connected graphs equipped with positive real edge lengths.",
+    "objects": [
+      "3-connected graph",
+      "positive edge-length assignment",
+      "geodesic cycle",
+      "peripheral cycle"
+    ]
+  },
+  "lifecycle": "active",
+  "msc": [
+    "05C38"
+  ],
+  "problem_id": "problem:opg-500-geodesic-cycles",
+  "quantifiers": [
+    {
+      "domain": "finite simple 3-connected graphs",
+      "kind": "forall",
+      "variables": [
+        "G"
+      ]
+    },
+    {
+      "domain": "positive real edge-length assignments ℓ:E(G)→R_{>0}",
+      "kind": "exists",
+      "variables": [
+        "ℓ"
+      ]
+    },
+    {
+      "domain": "ℓ-geodesic cycles of G",
+      "kind": "forall",
+      "variables": [
+        "C"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "retrieved_at": "2026-09-02T00:06:43Z",
+      "source": "UnsolvedMath",
+      "source_record_id": "unsolvedmath-opg-500-6a469c8c697d",
+      "url": "https://www.unsolvedmath.com/problems/OPG-500"
+    }
+  ],
+  "statement": {
+    "language": "en",
+    "text": "For every finite 3-connected graph G, does there exist an assignment of positive real lengths ℓ:E(G)→R_{>0} such that every ℓ-geodesic cycle is peripheral?",
+    "version": 1
+  },
+  "title": "Geodesic cycles and Tutte's theorem",
+  "updated_at": "2026-09-06T03:30:00Z"
+}

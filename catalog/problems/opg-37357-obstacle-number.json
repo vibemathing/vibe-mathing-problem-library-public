@@ -1,0 +1,100 @@
+{
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "aliases": [
+    "Open Problem Garden OPG-37357"
+  ],
+  "allowed_axioms": [
+    "finite-graph-basic",
+    "euclidean-geometry",
+    "real-ordered-field"
+  ],
+  "assumptions": [
+    "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
+  ],
+  "constraints": {
+    "allowed_adapters": [
+      "planar-graph-enumerator-v1",
+      "exact-geometry-smt-v1",
+      "lean-obligation-v1"
+    ],
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "max_attempts": 20,
+    "runtime": {
+      "max_output_bytes": 5242880,
+      "max_retries": 3,
+      "max_transitions": 300,
+      "timeout_seconds": 1800
+    }
+  },
+  "created_at": "2026-09-06T03:30:00Z",
+  "definitions": [
+    {
+      "definition": "A placement of vertices as points in R² together with polygonal obstacles P1,…,Pk such that two vertices are adjacent exactly when their connecting line segment intersects no obstacle.",
+      "term": "k-obstacle drawing"
+    },
+    {
+      "definition": "The minimum k for which a graph has a k-obstacle drawing.",
+      "term": "obstacle number"
+    }
+  ],
+  "domain": {
+    "description": "Finite simple planar graphs and straight-line visibility drawings with finitely many polygonal obstacles.",
+    "objects": [
+      "planar graph",
+      "obstacle drawing",
+      "obstacle number"
+    ]
+  },
+  "lifecycle": "active",
+  "msc": [
+    "05C62"
+  ],
+  "problem_id": "problem:opg-37357-obstacle-number",
+  "quantifiers": [
+    {
+      "domain": "finite simple planar graphs with obstacle number greater than 1",
+      "kind": "exists",
+      "variables": [
+        "G"
+      ]
+    },
+    {
+      "domain": "positive integers proposed as a universal upper bound",
+      "kind": "exists",
+      "variables": [
+        "k"
+      ]
+    },
+    {
+      "domain": "finite simple planar graphs",
+      "kind": "forall",
+      "variables": [
+        "H"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "retrieved_at": "2026-09-02T00:06:43Z",
+      "source": "UnsolvedMath",
+      "source_record_id": "unsolvedmath-opg-37357-5752fdb531dd",
+      "url": "https://www.unsolvedmath.com/problems/OPG-37357"
+    }
+  ],
+  "statement": {
+    "language": "en",
+    "text": "Does there exist a finite planar graph with obstacle number greater than 1? Separately, does there exist a universal integer k such that every finite planar graph has obstacle number at most k?",
+    "version": 1
+  },
+  "title": "Obstacle number of planar graphs",
+  "updated_at": "2026-09-06T03:30:00Z"
+}

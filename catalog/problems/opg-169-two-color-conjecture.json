@@ -1,0 +1,99 @@
+{
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "aliases": [
+    "Open Problem Garden OPG-169"
+  ],
+  "allowed_axioms": [
+    "finite-digraph-basic",
+    "planar-graph-basic",
+    "finite-combinatorics"
+  ],
+  "assumptions": [
+    "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
+  ],
+  "constraints": {
+    "allowed_adapters": [
+      "planar-digraph-enumerator-v1",
+      "acyclic-two-color-sat-v1",
+      "lean-obligation-v1"
+    ],
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "max_attempts": 20,
+    "runtime": {
+      "max_output_bytes": 5242880,
+      "max_retries": 3,
+      "max_transitions": 300,
+      "timeout_seconds": 1800
+    }
+  },
+  "created_at": "2026-09-06T03:30:00Z",
+  "definitions": [
+    {
+      "definition": "A digraph obtained by assigning one direction to every edge of a simple graph.",
+      "term": "orientation"
+    },
+    {
+      "definition": "A directed graph containing no directed cycle.",
+      "term": "acyclic digraph"
+    },
+    {
+      "definition": "The digraph on X containing every arc of G whose endpoints both lie in X.",
+      "term": "induced digraph G[X]"
+    }
+  ],
+  "domain": {
+    "description": "Orientations of finite simple planar graphs.",
+    "objects": [
+      "planar digraph",
+      "vertex 2-coloring",
+      "acyclic induced digraph"
+    ]
+  },
+  "lifecycle": "active",
+  "msc": [
+    "05C20",
+    "05C15"
+  ],
+  "problem_id": "problem:opg-169-two-color-conjecture",
+  "quantifiers": [
+    {
+      "domain": "orientations of finite simple planar graphs",
+      "kind": "forall",
+      "variables": [
+        "G"
+      ]
+    },
+    {
+      "domain": "partitions V(G)=X₁⊔X₂",
+      "kind": "exists",
+      "variables": [
+        "X₁",
+        "X₂"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "retrieved_at": "2026-09-02T00:06:43Z",
+      "source": "UnsolvedMath",
+      "source_record_id": "unsolvedmath-opg-169-203611002f24",
+      "url": "https://www.unsolvedmath.com/problems/OPG-169"
+    }
+  ],
+  "statement": {
+    "language": "en",
+    "text": "For every orientation G of a finite simple planar graph, can V(G) be partitioned into X₁ and X₂ so that each induced digraph G[Xᵢ] is acyclic?",
+    "version": 1
+  },
+  "title": "The Two Color Conjecture for planar digraphs",
+  "updated_at": "2026-09-06T03:30:00Z"
+}

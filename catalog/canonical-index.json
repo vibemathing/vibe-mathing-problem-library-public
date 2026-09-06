@@ -1,5 +1,66 @@
 {
-  "count": 0,
-  "records": [],
+  "count": 10,
+  "records": [
+    {
+      "contract_sha256": "5277056f9268355396375347348a4034902eaa2034148921ac239643f58cf2e6",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-37271-star-chromatic-index-cubic.json",
+      "problem_id": "problem:opg-37271-star-chromatic-index-cubic"
+    },
+    {
+      "contract_sha256": "76b2207954d4831261d0a61359a19e803cf8d913301756673c4c5ab962d8c8d6",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-401-circular-coloring-subcubic-planar.json",
+      "problem_id": "problem:opg-401-circular-coloring-subcubic-planar"
+    },
+    {
+      "contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-46613-cubic-p3-partition.json",
+      "problem_id": "problem:opg-46613-cubic-p3-partition"
+    },
+    {
+      "contract_sha256": "7ad1410069206a73b3cfd2149fc75d1509efc664f180b0ac96ae1f0f36473e8f",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-1808-monochromatic-reachability.json",
+      "problem_id": "problem:opg-1808-monochromatic-reachability"
+    },
+    {
+      "contract_sha256": "51d8524b7f530bacb73ee5da132109fbd3e54dc441b9ef926fcbcc3abbf8f449",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-500-geodesic-cycles.json",
+      "problem_id": "problem:opg-500-geodesic-cycles"
+    },
+    {
+      "contract_sha256": "10fb03f159d4818c5141567a77390e1351fda77c9810ac45d66dd7d4e14aa4f5",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-37357-obstacle-number.json",
+      "problem_id": "problem:opg-37357-obstacle-number"
+    },
+    {
+      "contract_sha256": "39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58",
+      "lifecycle": "active",
+      "path": "catalog/problems/erdos-81-chordal-clique-partition.json",
+      "problem_id": "problem:erdos-81-chordal-clique-partition"
+    },
+    {
+      "contract_sha256": "719230edd088c52a5468eed8090579e5eef1bf85d8a56e633350063108f345ec",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-169-two-color-conjecture.json",
+      "problem_id": "problem:opg-169-two-color-conjecture"
+    },
+    {
+      "contract_sha256": "60124bd981c32b7e5ba91955bbdaa76e2dfebf984722e144a589fceace0f7ba5",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-434-weak-pentagon.json",
+      "problem_id": "problem:opg-434-weak-pentagon"
+    },
+    {
+      "contract_sha256": "cb72346bada4d4c41ce287a6d04f4b756717cc0a12cdb85ace863b379873d0eb",
+      "lifecycle": "active",
+      "path": "catalog/problems/opg-37364-matching-cut-girth.json",
+      "problem_id": "problem:opg-37364-matching-cut-girth"
+    }
+  ],
   "schema_version": "1.0.0"
 }

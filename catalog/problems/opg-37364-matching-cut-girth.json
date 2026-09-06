@@ -1,0 +1,113 @@
+{
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "aliases": [
+    "Open Problem Garden OPG-37364"
+  ],
+  "allowed_axioms": [
+    "finite-graph-basic",
+    "finite-combinatorics",
+    "real-arithmetic"
+  ],
+  "assumptions": [
+    "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
+  ],
+  "constraints": {
+    "allowed_adapters": [
+      "high-girth-graph-enumerator-v1",
+      "matching-cut-sat-v1",
+      "lean-obligation-v1"
+    ],
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "max_attempts": 20,
+    "runtime": {
+      "max_output_bytes": 5242880,
+      "max_retries": 3,
+      "max_transitions": 300,
+      "timeout_seconds": 1800
+    }
+  },
+  "created_at": "2026-09-06T03:30:00Z",
+  "definitions": [
+    {
+      "definition": "2|E(G)|/|V(G)| for a nonempty finite graph G.",
+      "term": "average degree"
+    },
+    {
+      "definition": "The length of a shortest cycle, with girth +∞ for forests.",
+      "term": "girth"
+    },
+    {
+      "definition": "A nontrivial vertex bipartition (A,B) such that the edges with one endpoint in A and one in B form a matching.",
+      "term": "matching cut"
+    }
+  ],
+  "domain": {
+    "description": "Finite simple graphs with bounded average degree and sufficiently large girth.",
+    "objects": [
+      "finite graph",
+      "average degree",
+      "girth",
+      "matching cut"
+    ]
+  },
+  "lifecycle": "active",
+  "msc": [
+    "05C70"
+  ],
+  "problem_id": "problem:opg-37364-matching-cut-girth",
+  "quantifiers": [
+    {
+      "domain": "real numbers d>0",
+      "kind": "forall",
+      "variables": [
+        "d"
+      ]
+    },
+    {
+      "domain": "integers g≥3",
+      "kind": "exists",
+      "variables": [
+        "g"
+      ]
+    },
+    {
+      "domain": "finite simple graphs with average degree <d and girth ≥g",
+      "kind": "forall",
+      "variables": [
+        "G"
+      ]
+    },
+    {
+      "domain": "nonempty vertex bipartitions V(G)=A⊔B whose crossing edges form a matching",
+      "kind": "exists",
+      "variables": [
+        "A",
+        "B"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "retrieved_at": "2026-09-02T00:06:43Z",
+      "source": "UnsolvedMath",
+      "source_record_id": "unsolvedmath-opg-37364-7fb29f738f29",
+      "url": "https://www.unsolvedmath.com/problems/OPG-37364"
+    }
+  ],
+  "statement": {
+    "language": "en",
+    "text": "For every real d>0, does there exist an integer g≥3 such that every finite graph with average degree less than d and girth at least g has a matching cut?",
+    "version": 1
+  },
+  "title": "Matching cuts in sparse high-girth graphs",
+  "updated_at": "2026-09-06T03:30:00Z"
+}
