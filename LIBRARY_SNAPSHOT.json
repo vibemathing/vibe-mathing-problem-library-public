@@ -9,9 +9,9 @@
   },
   "files": [
     {
-      "bytes": 578,
+      "bytes": 644,
       "path": ".github/workflows/ci.yml",
-      "sha256": "61253b60dc5985e71528b53b4ef8eaf7e7e278630da5934fcaf6acb9c092d3f9"
+      "sha256": "e73f2d0ac8eda57465cde812e5715dea617a1d435b560b7fdac70efba5425358"
     },
     {
       "bytes": 117,
@@ -134,6 +134,6 @@
     "publication_source": "reviewed_internal_export",
     "worktree_dirty": true
   },
-  "tree_sha256": "9702d47a0fa5feb96a149edf13b897caa1dea12082c6c8f3da478b5429345084",
+  "tree_sha256": "94c142c2ecd0765c6776eed51c27c2c9657043a05385505835f8d8de3219b4d3",
   "visibility": "public"
 }
