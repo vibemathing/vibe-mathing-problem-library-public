@@ -19,9 +19,9 @@
       "sha256": "69ee8509c7592fb794b95ca237caa63bf18784e98d1e8c923dbcf857c19ef1b6"
     },
     {
-      "bytes": 7836,
+      "bytes": 8478,
       "path": "AGENTS.md",
-      "sha256": "23b889adf9e0737cc92986dfac9620b2199bee02a5c7ba70d8374dc84b8f4ffe"
+      "sha256": "224c0b16f61c81fd9f8afc1752f9a43adcea93455551fa762fe05eca197fe7bb"
     },
     {
       "bytes": 467,
@@ -114,6 +114,21 @@
       "sha256": "374e7ad1b772dcde731fec41b665923f309d66088f6b0670407b1268456a9267"
     },
     {
+      "bytes": 3483,
+      "path": "governance/control-plane/mathematical-reasoning-discipline.schema.json",
+      "sha256": "c4280dc3e32eac67076f1f30ecb1b131e77eabb534e3b0f6130afc7fff08264d"
+    },
+    {
+      "bytes": 2235,
+      "path": "governance/control-plane/mathematical-reasoning-discipline.v1.json",
+      "sha256": "468c1225bf4d72ed5e58410bd3c1c7df9988c1f22c1d72ae4af680827c188591"
+    },
+    {
+      "bytes": 7900,
+      "path": "governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md",
+      "sha256": "7d2d3da93179cf2db247c7fee0892bbfc370d05a9f26969ba2105ceabc389a28"
+    },
+    {
       "bytes": 20996,
       "path": "problem-library/records/canonical-problems.jsonl",
       "sha256": "e4ac44e99b0f306ce161efe8651464d018b590c8a03b966b3207770eb6f5a445"
@@ -184,6 +199,6 @@
     "publication_source": "reviewed_internal_export",
     "worktree_dirty": false
   },
-  "tree_sha256": "b7859b8661c8c3a365c1c8163d8cf9f8620f188aefa605c817a84759b54d311b",
+  "tree_sha256": "31a025162a9d4621598b9d12f015a5def4ee26d79ba18423583d95528aa92dad",
   "visibility": "public"
 }

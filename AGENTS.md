@@ -86,6 +86,12 @@ The public library is always derived from reviewed internal objects through an e
 - Recomputes all digests and runs privacy/license gates from a clean export tree.
 - Never exports internal source observations, draft queues, raw captures, private locators, sessions, credentials, or research artifacts.
 
+## Mandatory mathematical reasoning discipline
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+ProblemContract admission inherits `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`. Before admission, freeze objects, domain, quantifier order, definitions, assumptions, allowed axioms, target, exact negation, scale and extreme boundary cases; expose source-to-contract dependencies and ambiguities. A title, source status, finite sample, model summary, or missing sufficient condition cannot establish the statement, necessity, solvability, or a mathematical Result. Scoped instructions may tighten but never weaken this discipline.
+
 ## ProblemContract quality gate
 
 A canonical contract must:
