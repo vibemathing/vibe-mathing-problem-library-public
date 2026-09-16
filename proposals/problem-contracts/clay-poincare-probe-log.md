@@ -59,8 +59,31 @@ Observed result:
 - `lean-e2e`: bounded Lean subprocess terminated by signal `6`;
 - no Lean elaboration/type error was emitted before termination.
 
-Interpretation: under this verifier budget, the `PiL2 + ChartedSpace` import/dependency combination is already too heavy (or otherwise triggers the same bounded-runtime abort) before a useful theorem-level diagnostic is obtained. This does not refute the theorem. The next probe splits `PiL2` from `ChartedSpace` to identify the minimal trigger.
+Interpretation: under this verifier budget, the `PiL2 + ChartedSpace` import/dependency combination is already too heavy (or otherwise triggers the same bounded-runtime abort) before a useful theorem-level diagnostic is obtained. This does not refute the theorem.
+
+## Probe D — Euclidean-space / `PiL2` import alone
+
+- head: `b536c1649029c03f552447adaf394f3f33692932`;
+- workflow: `35125601417`;
+- imports isolated to `Mathlib.Analysis.InnerProductSpace.PiL2` (plus the fixture's tiny Nat import);
+- attempted declaration:
+
+```lean
+abbrev Euclidean3 := EuclideanSpace ℝ (Fin 3)
+
+theorem euclidean3_nonempty : Nonempty Euclidean3 := by
+  exact ⟨0⟩
+```
+
+Observed result:
+
+- `validate`: pass;
+- `production-loop`: fail;
+- `lean-e2e`: bounded Lean subprocess terminated by signal `6` after about 16 seconds of the Lean e2e phase;
+- no elaboration/type error was emitted before termination.
+
+Interpretation: the current `8192 MB` verifier envelope cannot successfully process even this minimal `PiL2`/`EuclideanSpace` probe. The failure therefore does not originate in the `ChartedSpace.secondCountable_of_sigmaCompact` proof or in the simple-connectivity layer. The next diagnostic isolates `Mathlib.Geometry.Manifold.ChartedSpace` with a lightweight model space that avoids `PiL2`.
 
 ## Current next probe
 
-Test `Mathlib.Analysis.InnerProductSpace.PiL2` alone with a trivial `EuclideanSpace ℝ (Fin 3)` witness/theorem. If it passes, test `ChartedSpace` separately. If it fails with signal `6`, treat the current verifier's memory envelope as incompatible with the exact Euclidean-space import and seek a smaller faithful interface or an authorized verifier-budget/toolchain adjustment.
+Test `Mathlib.Geometry.Manifold.ChartedSpace` without importing `PiL2`, using a lightweight model (for example `ℝ`) and the same compact-to-second-countable interface. If that passes, retain the theorem-level charted-space interface and treat `PiL2` as a verifier-resource integration blocker. If that also terminates by signal `6`, the current verifier budget is too small for the charted-manifold target layer itself and a separate verifier-budget/transport decision will be required.
