@@ -61,13 +61,13 @@
   "sources": [
     {
       "source": "Clay Mathematics Institute — Poincaré Conjecture",
-      "source_record_id": "clay-poincare-official-page",
+      "source_record_id": null,
       "url": "https://www.claymath.org/millennium/poincare-conjecture/",
       "retrieved_at": "2026-09-17T00:38:00+08:00"
     },
     {
       "source": "Clay Mathematics Institute — Official Problem Description by John Milnor",
-      "source_record_id": "clay-poincare-milnor-official-description",
+      "source_record_id": null,
       "url": "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf",
       "retrieved_at": "2026-09-17T00:38:00+08:00"
     }
