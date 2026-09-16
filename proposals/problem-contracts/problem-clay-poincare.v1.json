@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "problem_id": "problem:clay-poincare",
+  "title": "Poincaré conjecture (3-dimensional, topological)",
+  "aliases": [
+    "Poincaré Conjecture",
+    "Clay Poincaré Conjecture",
+    "clay-poincare",
+    "庞加莱猜想（历史已解决）"
+  ],
+  "statement": {
+    "text": "Every closed, simply connected topological 3-manifold is homeomorphic to the standard 3-sphere S³.",
+    "language": "en",
+    "version": 1
+  },
+  "domain": {
+    "description": "Closed, simply connected topological 3-manifolds: Hausdorff spaces locally homeomorphic to R^3, compact, and without boundary, with the standard notion of simple connectivity. For this compact locally Euclidean class, the usual second-countability convention is automatic; the Lean target audit records the corresponding derivation under the pinned Mathlib revision.",
+    "objects": [
+      "closed topological 3-manifold",
+      "simply connected space",
+      "standard 3-sphere S³",
+      "homeomorphism"
+    ]
+  },
+  "quantifiers": [
+    {
+      "kind": "forall",
+      "variables": ["M"],
+      "domain": "closed, simply connected topological 3-manifolds M"
+    },
+    {
+      "kind": "exists",
+      "variables": ["h"],
+      "domain": "homeomorphisms h : M ≃ S³"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "closed 3-manifold",
+      "definition": "A compact topological 3-manifold without boundary; here a topological 3-manifold is Hausdorff and locally homeomorphic to R^3. In the compact case this local Euclidean structure yields the standard second-countability condition, so no broader non-second-countable compact class is intended."
+    },
+    {
+      "term": "simply connected",
+      "definition": "Path connected, with every based loop homotopic through based loops to the constant loop; equivalently, the fundamental group is trivial."
+    },
+    {
+      "term": "standard 3-sphere S³",
+      "definition": "The unit sphere {x in R^4 | ||x|| = 1} with its subspace topology."
+    },
+    {
+      "term": "homeomorphic",
+      "definition": "There exists a bijection between the spaces that is continuous with continuous inverse."
+    }
+  ],
+  "assumptions": [
+    "No differentiable, PL, Riemannian, triangulated, or orientable structure is assumed in the theorem statement.",
+    "The conclusion is a homeomorphism to the standard 3-sphere, not merely a homotopy equivalence, diffeomorphism under extra hypotheses, finite verification, or a conditional geometrization statement."
+  ],
+  "allowed_axioms": ["none"],
+  "msc": ["57N10"],
+  "sources": [
+    {
+      "source": "Clay Mathematics Institute — Poincaré Conjecture",
+      "source_record_id": null,
+      "url": "https://www.claymath.org/millennium/poincare-conjecture/",
+      "retrieved_at": "2026-09-17T00:38:00+08:00"
+    },
+    {
+      "source": "Clay Mathematics Institute — Official Problem Description by John Milnor",
+      "source_record_id": null,
+      "url": "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf",
+      "retrieved_at": "2026-09-17T00:38:00+08:00"
+    },
+    {
+      "source": "Clay Mathematics Institute — Ricci Flow and the Poincaré Conjecture by John Morgan and Gang Tian",
+      "source_record_id": null,
+      "url": "https://www.claymath.org/library/monographs/cmim03.pdf",
+      "retrieved_at": "2026-09-17T00:51:00+08:00"
+    }
+  ],
+  "acceptance": {
+    "policy": "solution-admission-v1"
+  },
+  "constraints": {
+    "allowed_methods": [
+      "discovery",
+      "derivation",
+      "computation",
+      "proof",
+      "formalization"
+    ],
+    "allowed_adapters": [
+      "source-fidelity-review-v1",
+      "lean-obligation-v1"
+    ],
+    "max_attempts": 100,
+    "runtime": {
+      "max_transitions": 1000,
+      "max_retries": 3,
+      "timeout_seconds": 1800,
+      "max_output_bytes": 5242880
+    }
+  },
+  "lifecycle": "draft",
+  "created_at": "2026-09-17T00:38:00+08:00",
+  "updated_at": "2026-09-17T00:51:00+08:00"
+}
