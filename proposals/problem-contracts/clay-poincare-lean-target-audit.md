@@ -12,7 +12,7 @@ No smooth-only replacement, finite verification, conditional theorem, homology-s
 
 ## Pinned Lean reference
 
-The isolated verifier probe currently available in `vibemathing/vibe-mathing-cn-public` uses:
+The isolated verifier probe in `vibemathing/vibe-mathing-cn-public` uses:
 
 - Lean `4.33.0`;
 - Mathlib commit `db584cd6d46c92f209a44c0f1c829460d327499d`.
@@ -51,33 +51,64 @@ Therefore, for this compact Euclidean-charted target, the usual second-countabil
 
 The chart model is Euclidean 3-space rather than a Euclidean half-space. Thus the target is the boundaryless 3-manifold version required by the classical Poincaré conjecture.
 
-## Existing isolated compiler probe
+## Isolated compiler-probe history
 
 Temporary non-merge PR:
 
 - repository: `vibemathing/vibe-mathing-cn-public`;
 - PR: `#8` — `test: Poincaré target-layer elaboration under pinned Lean`;
-- final observed head: `7cba8628b2fd75dce5c4b9a1a017da1e1c2d9a23`;
-- workflow run: `35118596970`.
+- branch: `tmp-poincare-target-elab-20260916`.
 
-The final probe contains only the topological target layer plus elementary consequences of simple connectivity and a homeomorphism-composition helper. It deliberately removed the smooth sphere-manifold instance import to reduce the dependency/memory footprint.
+The PR is a disposable verifier probe and must not be merged as mathematical content.
 
-Observed workflow state:
+### Earlier broad target-layer probe
 
-- `validate` job: **success**;
-- `production-loop` job: **failure**;
-- failure occurred in the existing `lean-e2e` verifier when the bounded Lean subprocess terminated with signal `6`;
-- the verifier imposes an `8192 MB` hard memory ceiling and runs `lean -j1` directly on the fixture;
-- no successful kernel elaboration receipt was obtained for the appended Poincaré payload.
+An earlier head imported the simple-connectivity, Euclidean-space, charted-space, and sphere-related target dependencies together and appended the topological target layer. Workflow run `35118596970` failed in `lean-e2e`: the bounded Lean subprocess terminated with signal `6` under the verifier's `8192 MB` hard memory ceiling. This receipt did not distinguish an import/resource problem from a declaration problem.
 
-This receipt must be read narrowly: it identifies a verifier/resource-envelope failure. It does not establish that the candidate Lean declarations are correct or incorrect.
+### Reduced simple-connectivity probe — kernel success
+
+The branch was then reduced to isolate the `SimplyConnectedSpace` dependency. Current observed head:
+
+- commit `ceb15dbb5b49a8262be90948a880c83e8d879e20`;
+- CI workflow run `35124484438` (`CI` run #35);
+- `production-loop`: **success**;
+- `validate`: **success**;
+- production-loop maturity audit: `100/100 PASS`;
+- `lean-e2e`: **PASS**, exit code `0`.
+
+The reduced Lean source imports `Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected` and kernel-checks these project declarations:
+
+```lean
+theorem pathConnectedSpace_of_simplyConnected
+    (M : Type*) [TopologicalSpace M] [SimplyConnectedSpace M] :
+    PathConnectedSpace M := by
+  infer_instance
+
+theorem nonempty_of_simplyConnected
+    (M : Type*) [TopologicalSpace M] [SimplyConnectedSpace M] :
+    Nonempty M := by
+  exact (inferInstance : PathConnectedSpace M).nonempty
+
+theorem fundamentalGroup_subsingleton_of_simplyConnected
+    (M : Type*) [TopologicalSpace M] [SimplyConnectedSpace M] (x : M) :
+    Subsingleton (FundamentalGroup M x) := by
+  infer_instance
+```
+
+`AxiomAudit.lean` invokes `#print axioms` on all three declarations and the bounded axiom-audit Lean process exits successfully. The current verifier only exposes a coarse `axiom_clean` check in its receipt and the CI summary does not surface each declaration's printed axiom list, so this note does **not** upgrade that to a per-declaration zero-axiom claim.
+
+The fixed verifier implementation at the PR base runs Lean with `-j1`, timeout `600s`, output cap `2,000,000` bytes, and an `8192 MB` hard memory ceiling.
+
+### Interpretation
+
+The successful reduced probe is real kernel evidence for the simple-connectivity interface and the three helper declarations above. It is not evidence for the Poincaré conclusion. The difference between the earlier broad failure and the reduced success strongly localizes the current compiler blocker to the heavier target dependency/import combination rather than the basic `SimplyConnectedSpace` layer.
 
 ## Next formalization checkpoints after canonical admission
 
-1. Create the target repository theorem with the exact topological assumptions and homeomorphism conclusion.
-2. Kernel-check the target layer under the repository's fixed Lean/Mathlib revision.
+1. Re-introduce the target dependencies incrementally (`EuclideanSpace`, charted-space interface, sphere subtype/homeomorphism) and keep the smallest passing import set.
+2. Kernel-check the exact target proposition under the repository's fixed Lean/Mathlib revision without importing or invoking the upstream `proof_wanted` as proof.
 3. Add an explicit second-countability derivation/audit so the encoded manifold convention is transparent.
-4. Audit `#print axioms` for every theorem introduced by this project; reject `sorry`, `admit`, project-added axioms, and use of the Mathlib `proof_wanted` declaration as proof.
+4. Strengthen the axiom audit to obtain per-declaration auditable output for project theorems; reject `sorry`, `admit`, project-added axioms, and proof-wanted shortcuts.
 5. Decompose the actual proof into explicit obligations. The decisive missing mathematics remains the Perelman/Hamilton Ricci-flow-with-surgery chain (or a formally complete equivalent route), plus any topological-to-smooth bridge used by that route.
 6. Preserve the final theorem at the topological/homeomorphism level even if intermediate mathematics is smooth.
 
@@ -85,13 +116,15 @@ This receipt must be read narrowly: it identifies a verifier/resource-envelope f
 
 Verified here:
 
-- the exact pinned Mathlib target declaration exists;
+- the exact pinned Mathlib target declaration exists as a statement reference;
 - the compact charted target derives the standard second-countability convention through existing pinned Mathlib lemmas;
-- the isolated CI probe reached the fixed Lean verifier and failed under its bounded runtime with signal `6`.
+- the reduced simple-connectivity probe kernel-checks under Lean `4.33.0` / Mathlib `db584cd6...` with both CI jobs passing;
+- the three helper declarations above compile in that fixed environment.
 
 Still open:
 
-- successful kernel elaboration of the current Poincaré target payload;
+- successful kernel elaboration of the full topological Poincaré target layer under the bounded verifier;
+- per-declaration zero-axiom receipt for the new helpers;
 - all substantive Poincaré proof obligations;
 - axiom/trust audit of a future complete proof;
 - independent clean-environment verification;
