@@ -14,7 +14,7 @@
     "version": 1
   },
   "domain": {
-    "description": "Closed, simply connected topological 3-manifolds: Hausdorff spaces locally homeomorphic to R^3, compact, and without boundary, with the standard notion of simple connectivity.",
+    "description": "Closed, simply connected topological 3-manifolds: Hausdorff spaces locally homeomorphic to R^3, compact, and without boundary, with the standard notion of simple connectivity. For this compact locally Euclidean class, the usual second-countability convention is automatic; the Lean target audit records the corresponding derivation under the pinned Mathlib revision.",
     "objects": [
       "closed topological 3-manifold",
       "simply connected space",
@@ -37,7 +37,7 @@
   "definitions": [
     {
       "term": "closed 3-manifold",
-      "definition": "A compact topological 3-manifold without boundary; here a topological 3-manifold is Hausdorff and locally homeomorphic to R^3."
+      "definition": "A compact topological 3-manifold without boundary; here a topological 3-manifold is Hausdorff and locally homeomorphic to R^3. In the compact case this local Euclidean structure yields the standard second-countability condition, so no broader non-second-countable compact class is intended."
     },
     {
       "term": "simply connected",
@@ -70,6 +70,12 @@
       "source_record_id": null,
       "url": "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf",
       "retrieved_at": "2026-09-17T00:38:00+08:00"
+    },
+    {
+      "source": "Clay Mathematics Institute — Ricci Flow and the Poincaré Conjecture by John Morgan and Gang Tian",
+      "source_record_id": null,
+      "url": "https://www.claymath.org/library/monographs/cmim03.pdf",
+      "retrieved_at": "2026-09-17T00:51:00+08:00"
     }
   ],
   "acceptance": {
@@ -97,5 +103,5 @@
   },
   "lifecycle": "draft",
   "created_at": "2026-09-17T00:38:00+08:00",
-  "updated_at": "2026-09-17T00:38:00+08:00"
+  "updated_at": "2026-09-17T00:51:00+08:00"
 }
