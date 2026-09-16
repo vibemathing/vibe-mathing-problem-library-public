@@ -17,6 +17,12 @@ Milnor's official description asks whether a compact three-dimensional manifold 
 
 The source status `Solved` is historical/source metadata. It is not placed in the ProblemContract as a mathematical Result.
 
+## Provenance handoff
+
+This public repository declares `includes_source_observations=false`, so the normalization proposal cannot truthfully name an internal `SourceObservation` that is absent from this publication surface. The two direct Clay sources therefore use `source_record_id: null` in the proposal. No guessed or synthesized observation identifier is used.
+
+The trusted importer must resolve the internal observation for bounty key `clay-poincare`, verify that its locator/status metadata really corresponds to these Clay sources and to the concrete repository identity, and attach or preserve the true internal observation identity/digest according to the canonical admission process. If the internal observation differs materially, admission must stop for source-fidelity review.
+
 ## Quantifier and object audit
 
 - Universal object: an arbitrary closed, simply connected topological 3-manifold `M`.
@@ -71,10 +77,11 @@ Mathlib also lists a separate smooth theorem with an additional `IsManifold ... 
 
 An independent admission reviewer/importer should still verify:
 
-1. source provenance and the exact Clay source wording;
-2. duplicate identity against any internal canonical object;
-3. the project convention for `closed`, `topological 3-manifold`, and `allowed_axioms`;
-4. that the canonical record uses the frozen statement without source-status leakage;
-5. that downstream provisioning copies the accepted canonical JSON byte-for-byte/digest-for-digest into `vibemathing/problem-clay-poincare` and then creates the admitted Attempt/Route/ObligationGraph packet.
+1. the exact internal `SourceObservation` identity/digest for `clay-poincare` and its correspondence to the direct Clay sources above;
+2. source provenance and the exact Clay source wording;
+3. duplicate identity against any internal canonical object;
+4. the project convention for `closed`, `topological 3-manifold`, and `allowed_axioms`;
+5. that the canonical record uses the frozen statement without source-status leakage;
+6. that downstream provisioning copies the accepted canonical JSON byte-for-byte/digest-for-digest into `vibemathing/problem-clay-poincare` and then creates the admitted Attempt/Route/ObligationGraph packet.
 
 Proposal assessment: **statement-faithful candidate, pending independent canonical admission**.
